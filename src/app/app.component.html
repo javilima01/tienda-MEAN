@@ -1,0 +1,91 @@
+<!-- Toolbar -->
+<div class="contenido">
+    <div class="navegation-bar col-md">
+      <nav class="navbar">
+        <div id="imagenes-wrapper">
+          <div class="logo-wrapper"
+            (click) = toogletab()>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>  
+          <div id="img-wrapper">
+            <a routerLink="/" class="navbar-brand">
+              <img id="logo" src="http://localhost:8080/../../imagenes/logo-black.png">
+            </a>
+          </div>  
+        </div>
+        <div></div>
+        <div class="navbar-nav opciones">
+          <div id="buscar-wrapper">
+            <li class="nav-item buscar-li">
+              <a routerLink="articulos" class="nav-link buscar">BUSCAR</a>
+            </li>
+          </div>
+          <div id="add-wrapper">
+            <li class="nav-item add">
+              <a routerLink="add" id="add" class="nav-link">ADD</a>
+            </li>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="nav-wrapper">
+      <div id="close-tab">
+        <div id="close" (click)=toogletab()></div>
+      </div>
+      <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div id="categorias">
+          <img id="side-logo" src="http://localhost:8080/../../imagenes/logo-black.png">
+        </div>
+        <div id="cazadoras" class="categoria">
+          <a href="filtros/cazadoras">CAZADORAS</a>
+        </div>
+        <div id="abrigos" class="categoria">
+          <a href="filtros/abrigos">ABRIGOS | PLUMÍFEROS</a></div>
+        <div id="chaquetas" class="categoria">
+          <a href="filtros/chaquetas">CHAQUETAS | BLAZERS</a>
+        </div>
+        <div id="vestidos" class="categoria">
+          <a href="filtros/vestidos">VESTIDO | MONO</a>
+        </div>
+        <div id="jersey" class="categoria">
+          <a href="filtros/jerseys">JERSEY | BLUSA</a></div>
+        <div id="camisa" class="categoria">
+          <a href="filtros/camisas">CAMISA</a>
+        </div>
+        <div id="camiseta" class="categoria">
+          <a href="filtros/camisetas">CAMISETA</a>
+        </div>
+        <div id="polo" class="categoria">
+          <a href="filtros/polos">POLO</a>
+        </div>
+        <div id="top" class="categoria">
+          <a href="filtros/tops">TOP</a>
+        </div>
+        <div id="body" class="categoria">
+          <a href="filtros/body">BODY</a>
+        </div>
+        <div id="sudadera" class="categoria">
+          <a href="filtros/sudadera">SUDADERA</a>
+        </div>
+        <div id="pantalones" class="categoria">
+          <a href="filtros/pantalones">PANTALONES</a>
+        </div>
+        <div id="shorts" class="categoria">
+          <a href="filtros/faldas">SHORTS | FALDAS</a>
+        </div>
+        <div id="zapatos" class="categoria">
+          <a href="filtros/zapatos">ZAPATOS</a>
+        </div>
+      </nav>
+    </div>
+    
+    <div class="col-xs-8">
+      <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,60 @@
+<div id="filtros" class="d-flex justify-content-center">
+  <div class='justify-content-center filtro' id ='filtro-wrapper0'>
+    <a id ='filtro0' class="filtros-a" (click)=searchSubcategory(0)>VER TODO</a>
+    <div id="border-filtro0"></div>
+  </div>
+  <div 
+    *ngFor = "let categoria of categorias; let i = index;"
+    class='justify-content-center filtro' id ="filtro-wrapper{{i+1}}"
+    >
+      <a 
+        class ="filtros-a" 
+        (click) = searchSubcategory(i+1)
+        id = "filtro{{i+1}}"
+        >{{categoria}}</a>
+        <div id="border-filtro{{i+1}}"></div>
+  </div>
+</div>
+<div class="list row">
+    <div class="col-md-12 articulos-wrapper">
+      <ul class="list-group-horizontal-sm">
+        <div class="articulos">
+          <div 
+            class="articulo"
+            *ngFor="let articulo of articulos; let i = index;">
+            <a
+              class="imagen_a"
+              routerLink="../../articulos/{{articulo._id}}"
+            >
+              <li
+                class="list-group-item articulos_list"
+                [class.active]="i == currentIndex"
+              >
+                <div class="articulo-wrapper">
+                  <div class="articulo-imagen">
+                    <img 
+                      #imagen{{indexOfelement}}
+                      *ngIf = "articulo.imagenes"
+                      src="http://localhost:8080/../../imagenes/{{articulo.imagenes[0]}}" 
+                      class="img-reponsive preview"/>
+                  </div>
+                  <div class="articulo-informacion">
+                    <div id="nombre">
+                      {{ articulo.nombre }}
+                    </div>
+                    <div id="precio">
+                      {{ articulo.precio }} EUR
+                    </div>
+                    <div id="_id">
+                      {{articulo._id}}
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </a>
+          </div>
+        </div>
+      </ul>
+    </div>
+    <footer></footer>
+  </div>
